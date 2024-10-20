@@ -6,15 +6,7 @@ import { Input } from "@/components/ui/input";
 // import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Card, CardContent } from "@/components/ui/card";
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  LayoutGrid,
-  Search,
-  History,
-  MessageSquare,
-  ArrowLeft,
-  Bell,
-  User,
-} from "lucide-react";
+import { LayoutGrid, Search, History, MessageSquare } from "lucide-react";
 
 export function CryptoWalletComponent() {
   const [chatMessages, setChatMessages] = useState([
@@ -75,20 +67,7 @@ export function CryptoWalletComponent() {
           </Button>
         </nav>
       </aside>
-      <main className="flex-1 p-4">
-        <header className="flex justify-between items-center mb-4">
-          <Button variant="ghost" size="icon">
-            <ArrowLeft className="h-6 w-6" />
-          </Button>
-          <div>
-            <Button variant="ghost" size="icon" className="mr-2">
-              <Bell className="h-6 w-6" />
-            </Button>
-            <Button variant="ghost" size="icon">
-              <User className="h-6 w-6" />
-            </Button>
-          </div>
-        </header>
+      <main className="flex-1 p-12">
         <div className="grid gap-4">
           {/* <Card>
             <CardHeader>
