@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   LayoutGrid,
   Search,
@@ -57,7 +58,7 @@ export function CryptoWalletComponent() {
       <aside className="w-64 bg-white p-4 hidden md:block">
         <div className="flex items-center mb-8">
           <div className="w-8 h-8 bg-purple-500 rounded-full mr-2"></div>
-          <span className="font-bold text-lg">Crypto Wallet</span>
+          <span className="font-bold text-lg">DeGenPT</span>
         </div>
         <nav>
           <Button variant="ghost" className="w-full justify-start mb-2">
@@ -88,8 +89,8 @@ export function CryptoWalletComponent() {
             </Button>
           </div>
         </header>
-        <div className="grid md:grid-cols-2 gap-4">
-          <Card>
+        <div className="grid gap-4">
+          {/* <Card>
             <CardHeader>
               <CardTitle>My Balance</CardTitle>
             </CardHeader>
@@ -133,7 +134,7 @@ export function CryptoWalletComponent() {
                 </TabsContent>
               </Tabs>
             </CardContent>
-          </Card>
+          </Card> */}
           <Card>
             <CardContent className="p-0">
               <div className="h-[500px] overflow-y-auto p-4">
