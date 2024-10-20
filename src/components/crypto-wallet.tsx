@@ -17,35 +17,35 @@ import {
 
 export function CryptoWalletComponent() {
   const [chatMessages, setChatMessages] = useState([
-    { sender: "'You'", message: "'What is the price of ETH?'" },
+    { sender: "You", message: "What is the price of ETH?" },
     {
-      sender: "'Fungi'",
-      message: "'The price of Wrapped Ether (WETH) is $3507.18 USD.'",
+      sender: "Fungi",
+      message: "The price of Wrapped Ether (WETH) is $3507.18 USD.",
     },
-    { sender: "'You'", message: "'Swap 3 DAI to WETH'" },
+    { sender: "You", message: "Swap 3 DAI to WETH" },
     {
-      sender: "'Fungi'",
+      sender: "Fungi",
       message:
-        "'I have initiated the swap of 3 DAI to WETH. You will receive confirmation prompt shortly.'",
+        "I have initiated the swap of 3 DAI to WETH. You will receive confirmation prompt shortly.",
     },
   ]);
-  const [inputMessage, setInputMessage] = useState("''");
+  const [inputMessage, setInputMessage] = useState("");
 
   const sendMessage = () => {
     if (inputMessage.trim()) {
       setChatMessages([
         ...chatMessages,
-        { sender: "'You'", message: inputMessage },
+        { sender: "You", message: inputMessage },
       ]);
-      setInputMessage("''");
+      setInputMessage("");
       // Here you would typically call an API to get the AI response
       setTimeout(() => {
         setChatMessages((prev) => [
           ...prev,
           {
-            sender: "'Fungi'",
+            sender: "Fungi",
             message:
-              "'I understand you want to perform an action. How can I assist further?'",
+              "I understand you want to perform an action. How can I assist further?",
           },
         ]);
       }, 1000);
@@ -141,15 +141,13 @@ export function CryptoWalletComponent() {
                   <div
                     key={index}
                     className={`mb-4 ${
-                      msg.sender === "'You'" ? "'text-right'" : "''"
+                      msg.sender === "You" ? "text-right" : ""
                     }`}
                   >
                     <div className="font-bold">{msg.sender}</div>
                     <div
                       className={`inline-block p-2 rounded-lg ${
-                        msg.sender === "'You'"
-                          ? "'bg-purple-100'"
-                          : "'bg-gray-100'"
+                        msg.sender === "You" ? "bg-purple-100" : "bg-gray-100"
                       }`}
                     >
                       {msg.message}
